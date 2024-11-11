@@ -14,7 +14,7 @@ const projects = [
   {
     title: 'Job-sync',
     description: 'a job search platform that connects job seekers and employers.',
-    image: '/images/image.png',
+    image: '/images/jobsync.png',
     tech: ['React', 'Graphql', 'react-bootstrap','MongoDB'],
     github: 'https://github.com',
     live: 'https://example.com'
