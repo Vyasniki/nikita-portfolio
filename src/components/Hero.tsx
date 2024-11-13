@@ -114,7 +114,7 @@ export default function Hero() {
             <motion.div
               animate={{ y: [-20, 20, -20] }}
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-              className="rounded-full bg-white p-2 shadow-lg"
+              className="rounded-full bg-black p-2 shadow-lg"
               style={{
                 border: '2px solid var(--card-border)',
                 width: '500px',
