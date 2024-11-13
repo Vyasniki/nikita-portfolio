@@ -91,7 +91,7 @@ export default function About() {
                     {edu.degree}
                   </h4>
                   <p className="mb-2 text-indigo-600">{edu.school}</p>
-                  <p className="text-sm mb-2 text-gray-500">{edu.year}</p>
+             
                   <p className="text-gray-600">{edu.description}</p>
                 </motion.div>
               ))}

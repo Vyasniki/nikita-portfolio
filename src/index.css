@@ -14,7 +14,7 @@
   --card-border: #e5e7eb;
 }
 
-[data-theme='dark'] {
+/* [data-theme='dark'] {
   --background: #0f172a;
   --background-secondary: #1e293b;
   --background-tertiary: #334155;
@@ -24,7 +24,7 @@
   --accent-hover: #6366f1;
   --card-bg: #1e293b;
   --card-border: #334155;
-}
+} */
 
 body {
   background-color: var(--background);

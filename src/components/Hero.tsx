@@ -109,17 +109,26 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative"
+            className="relative flex items-center justify-center"
           >
             <motion.div
               animate={{ y: [-20, 20, -20] }}
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+              className="rounded-full bg-white p-2 shadow-lg"
+              style={{
+                border: '2px solid var(--card-border)',
+                width: '500px',
+                height: '500px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
             >
               <img
-                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800&h=600"
+                src="/images/profile picture.png"
                 alt="Developer workspace"
-                className="rounded-2xl shadow-2xl"
-                style={{ border: '1px solid var(--card-border)' }}
+                 className="rounded-full w-full h-full object-cover"
+                // style={{ border: '1px solid var(--card-border)' }}
               />
             </motion.div>
             {/* Badge with Experience */}

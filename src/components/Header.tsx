@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail } from 'lucide-react';
-import ThemeToggle from './ThemeToggle.tsx';
+// import ThemeToggle from './ThemeToggle.tsx';
 
 export default function Header() {
   return (
@@ -57,8 +57,8 @@ export default function Header() {
 
           <div className="flex items-center space-x-4">
             {[
-              { Icon: Github, href: 'https://github.com' },
-              { Icon: Linkedin, href: 'https://linkedin.com' },
+              { Icon: Github, href: 'https://github.com/Vyasniki' },
+              { Icon: Linkedin, href: 'https://www.linkedin.com/in/nikita-vyas-50203a111/' },
               { Icon: Mail, href: 'mailto:vyasniki93@gmail.com' }
             ].map(({ Icon, href }, index) => (
               <motion.a
@@ -73,7 +73,7 @@ export default function Header() {
                 <Icon className="w-5 h-5" />
               </motion.a>
             ))}
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
           </div>
         </div>
       </nav>

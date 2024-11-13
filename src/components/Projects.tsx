@@ -1,22 +1,29 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 const projects = [
   {
     title: 'DentaFlex',
-    description: 'A website connecting clinics and doctors, allowing clinics to post available shifts and doctors to pick them seamlessly .',
+    description: `Developed a robust front-end using React and React-Bootstrap, creating a responsive and dynamic user
+               interface. Implemented comprehensive user validation mechanisms to ensure data integrity and
+              enhance user experience. Utilized Material UI for creating a modern, intuitive design with consistent and
+                          professional components. Seamlessly integrated CRUD operations using Axios and MongoDB, enabling
+                                 efficient data management and real-time synchronization across the application .`,
     image: '/images/dentaflex.png',
     tech: ['React', 'Node.js', 'MongoDB', 'Express'],
-    github: 'https://github.com',
     live: 'https://dentaflex.ca/'
   },
   {
     title: 'Job-sync',
-    description: 'a job search platform that connects job seekers and employers.',
+    description: `a job search platform that connects job seekers and employers.Architected a scalable microservices-based application with multiple independent services, each
+                  designed with distinct database contexts to ensure modular and flexible system design. Implemented
+                  robust user authentication and authorization mechanisms using GraphQL and JWT, providing secure
+                  and granular access control across different user roles. Developed comprehensive job application and
+                  review systems with advanced filtering and matching algorithms, enabling seamless interaction between
+                  job seekers and employers. `,
     image: '/images/jobsync.png',
     tech: ['React', 'Graphql', 'react-bootstrap','MongoDB'],
-    github: 'https://github.com',
     live: 'https://example.com'
   },
   {
@@ -24,7 +31,6 @@ const projects = [
     description: 'Analytics dashboard for social media management and monitoring.',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800&h=500',
     tech: ['Html', 'CSS','Javascript'],
-    github: 'https://github.com',
     live: 'https://example.com'
   }
 ];
@@ -60,14 +66,14 @@ export default function Projects() {
                   className="w-full h-48 object-cover"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center space-x-4">
-                  <a
-                    href={project.github}
+                  {/* <a
+                   
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-white rounded-full hover:bg-gray-100 transition-colors"
                   >
                     <Github className="w-5 h-5 text-gray-900" />
-                  </a>
+                  </a> */}
                   <a
                     href={project.live}
                     target="_blank"
