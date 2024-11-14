@@ -125,7 +125,7 @@ export default function Hero() {
               }}
             >
               <img
-                src="/images/profile picture.png"
+                src="/images/profile.png"
                 alt="Developer workspace"
                  className="rounded-full w-full h-full object-cover"
                 // style={{ border: '1px solid var(--card-border)' }}

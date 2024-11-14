@@ -27,11 +27,11 @@ const projects = [
     live: 'https://example.com'
   },
   {
-    title: 'Social Media Dashboard',
-    description: 'Analytics dashboard for social media management and monitoring.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800&h=500',
+    title: 'ResuMagic',
+    description: 'A dynamic and customizable Resume Builder application that allows users to create, preview, and download professional resumes in PDF format. This project leverages JavaScript, HTML, CSS, and html2pdf.js to provide an interactive, user-friendly experience. Users can input personal information, education, and work history, choose from custom themes, and instantly download their formatted resume. The application showcases DOM manipulation, event handling, and dynamic PDF generation to create an efficient and visually appealing resume-building tool.',
+    image: '/images/resumagic.png',
     tech: ['Html', 'CSS','Javascript'],
-    live: 'https://example.com'
+    live: 'https://resumagic-resume-builder.vercel.app/'
   }
 ];
 
