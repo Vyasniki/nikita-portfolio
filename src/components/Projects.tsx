@@ -24,7 +24,7 @@ const projects = [
                   job seekers and employers. `,
     image: '/images/jobsync.png',
     tech: ['React', 'Graphql', 'react-bootstrap','MongoDB'],
-    live: 'https://example.com'
+    live: 'https://job-sync-front.netlify.app/'
   },
   {
     title: 'ResuMagic',

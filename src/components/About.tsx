@@ -1,83 +1,65 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, BookOpen, Brain, GraduationCap, Trophy } from 'lucide-react';
+import { GraduationCap, Briefcase } from 'lucide-react';
 
 const education = [
   {
-    degree: "Web development",
-    school: "Conestoga College",
-    description: "Master the essential skills to build dynamic, responsive websites and applications"
-  },
-  {
-    degree: "Bachelor's in Computer Science",
-    school: "SVMIT",
-    description: "Focus on Full Stack Development and Systems Design"
-  }
-];
-
-const certifications = [
-  {
-    name: "AWS Solutions Architect",
-    issuer: "Amazon Web Services",
-    year: "2022",
-    icon: Trophy
-  },
-  {
-    name: "Google Cloud Professional",
-    issuer: "Google",
-    year: "2021",
-    icon: Award
-  },
-  {
-    name: "Meta Frontend Developer",
-    issuer: "Meta",
+    degree: "Post-Graduate Diploma in Web Development",
+    school: "Conestoga College, Brantford, Canada",
     year: "2023",
-    icon: BookOpen
-  }
+    description: "Advanced concepts in web development, responsive design, and modern frameworks.",
+  },
+  {
+    degree: "Bachelor of Technology in Computer Science",
+    school: "Gujarat Technological University (GTU), Gujarat, India",
+    year: "2015",
+    description: "Comprehensive coursework in full-stack development and systems design.",
+  },
 ];
 
-const additionalSkills = [
+const experience = [
   {
-    category: "Soft Skills",
-    items: ["Leadership", "Problem Solving", "Communication", "Team Management"]
+    title: "Full Stack Developer",
+    company: "Poised Genie Inc., Toronto, Canada",
+    duration: "June 2023 – May 2024",
+    details: [
+      "Developed and maintained a comprehensive web application using React.js, Node.js, and MongoDB.",
+      "Designed and built RESTful APIs, enabling seamless communication between frontend and backend systems.",
+      "Implemented secure authentication mechanisms using JSON Web Tokens (JWT).",
+    ],
   },
   {
-    category: "Languages",
-    items: ["English", "Hindi"]
+    title: "Web Developer",
+    company: "Atmiya Infosoft, Gujarat, India",
+    duration: "June 2015 – June 2018",
+    details: [
+      "Developed responsive web applications using HTML5, CSS3, JavaScript, and jQuery.",
+      "Collaborated with cross-functional teams to gather requirements and deliver solutions.",
+    ],
   },
-  {
-    category: "Interests",
-    items: ["AI/ML", "Blockchain", "IoT", "Cloud Computing"]
-  }
 ];
 
 export default function About() {
-    return (
-      <section id="about" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-4 text-gray-900">
-              About Me
-            </h2>
-            <p className="text-xl text-gray-600">
-              My journey, achievements, and expertise
-            </p>
-          </motion.div>
-  
+  return (
+    <section id="about" className="py-20 bg-gray-100">
+      <div className="container mx-auto px-6">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-bold mb-4 text-gray-900">About Me</h2>
+          <p className="text-xl text-gray-600">A snapshot of my education and experience</p>
+        </motion.div>
+
+        {/* Main Layout */}
+        <div className="grid md:grid-cols-2 gap-12">
           {/* Education Section */}
-          <div className="mb-16">
-            <div className="flex items-center mb-8">
-              <GraduationCap className="w-6 h-6 mr-3 text-indigo-600" />
-              <h3 className="text-2xl font-bold text-gray-900">
-                Education
-              </h3>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8">
+          <div>
+            <div className="relative pb-8">
+              <div className="absolute w-1 bg-indigo-500 left-5 top-0 bottom-0" />
               {education.map((edu, index) => (
                 <motion.div
                   key={index}
@@ -85,95 +67,54 @@ export default function About() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="p-6 rounded-xl bg-white shadow-lg"
+                  className="flex items-start space-x-4 mb-12"
                 >
-                  <h4 className="text-xl font-semibold mb-2 text-gray-900">
-                    {edu.degree}
-                  </h4>
-                  <p className="mb-2 text-indigo-600">{edu.school}</p>
-             
-                  <p className="text-gray-600">{edu.description}</p>
+                  <div className="flex-shrink-0 bg-indigo-500 text-white p-3 rounded-full">
+                    <GraduationCap className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900">{edu.degree}</h4>
+                    <p className="text-sm text-gray-600">{edu.school}</p>
+                    <p className="text-sm text-gray-500">{edu.year}</p>
+                    <p className="text-gray-600 mt-2">{edu.description}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>
           </div>
-  
-          {/* Certifications Section */}
-          <div className="mb-16">
-            <div className="flex items-center mb-8">
-              <Award className="w-6 h-6 mr-3 text-indigo-600" />
-              <h3 className="text-2xl font-bold text-gray-900">
-                Certifications
-              </h3>
-            </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              {certifications.map((cert, index) => {
-                const Icon = cert.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="p-6 rounded-xl bg-white shadow-lg flex items-start space-x-4"
-                  >
-                    <div className="p-3 rounded-lg bg-indigo-50">
-                      <Icon className="w-6 h-6 text-indigo-600" />
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-semibold mb-1 text-gray-900">
-                        {cert.name}
-                      </h4>
-                      <p className="text-sm mb-1 text-gray-600">
-                        {cert.issuer}
-                      </p>
-                      <p className="text-sm text-gray-500">
-                        {cert.year}
-                      </p>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-  
-          {/* Additional Skills Section */}
+
+          {/* Experience Section */}
           <div>
-            <div className="flex items-center mb-8">
-              <Brain className="w-6 h-6 mr-3 text-indigo-600" />
-              <h3 className="text-2xl font-bold text-gray-900">
-                Additional Skills
-              </h3>
-            </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              {additionalSkills.map((skillGroup, index) => (
+            <div className="relative pb-8">
+              <div className="absolute w-1 bg-indigo-500 left-5 top-0 bottom-0" />
+              {experience.map((exp, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="p-6 rounded-xl bg-white shadow-lg"
+                  className="flex items-start space-x-4 mb-12"
                 >
-                  <h4 className="text-lg font-semibold mb-4 text-gray-900">
-                    {skillGroup.category}
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {skillGroup.items.map((item, itemIndex) => (
-                      <span
-                        key={itemIndex}
-                        className="px-3 py-1 rounded-full text-sm bg-indigo-50 text-indigo-600"
-                      >
-                        {item}
-                      </span>
-                    ))}
+                  <div className="flex-shrink-0 bg-indigo-500 text-white p-3 rounded-full">
+                    <Briefcase className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900">{exp.title}</h4>
+                    <p className="text-sm text-gray-600">{exp.company}</p>
+                    <p className="text-sm text-gray-500">{exp.duration}</p>
+                    <ul className="list-disc pl-5 mt-2 text-gray-600">
+                      {exp.details.map((detail, detailIndex) => (
+                        <li key={detailIndex}>{detail}</li>
+                      ))}
+                    </ul>
                   </div>
                 </motion.div>
               ))}
             </div>
           </div>
         </div>
-      </section>
-    );
-  }
+      </div>
+    </section>
+  );
+}

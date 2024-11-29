@@ -1,8 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Blend, Pointer } from 'lucide-react';
 
 export default function Hero() {
+  const handleDownloadResume = () => {
+    window.open('/resume/NikitaVyas-Resume.pdf', '_blank'); // Add your resume file path here
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden"
       style={{ background: 'var(--background)' }}>
@@ -92,14 +96,17 @@ export default function Hero() {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="#contact"
+                // href="#contact"
                 className="px-8 py-3 rounded-lg border-2 transition-colors"
+                onClick={handleDownloadResume}
+              
                 style={{ 
                   borderColor: 'var(--accent)',
-                  color: 'var(--accent)'
+                  color: 'var(--accent)',
+                  cursor:'Pointer',
                 }}
               >
-                Contact Me
+                Download Resume
               </motion.a>
             </motion.div>
           </motion.div>
@@ -114,37 +121,26 @@ export default function Hero() {
             <motion.div
               animate={{ y: [-20, 20, -20] }}
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-              className="rounded-full bg-black p-2 shadow-lg"
+              className="rounded-full  overflow-hidden mix-blend-multiply"
               style={{
-                border: '2px solid var(--card-border)',
+                // border: '2px solid var(--card-border)',
                 width: '500px',
                 height: '500px',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                // background: 'var(--background)'
+               
               }}
             >
               <img
-                src="/images/profile.png"
+                src="/images/myphoto.png"
                 alt="Developer workspace"
                  className="rounded-full w-full h-full object-cover"
                 // style={{ border: '1px solid var(--card-border)' }}
               />
             </motion.div>
-            {/* Badge with Experience */}
-            {/* <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.5 }}
-              className="absolute -bottom-6 -right-6 p-4 rounded-lg"
-              style={{ 
-                background: 'var(--card-bg)',
-                border: '1px solid var(--card-border)',
-                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
-              }}
-            >
-            
-            </motion.div> */}
+           
           </motion.div>
         </div>
       </div>
